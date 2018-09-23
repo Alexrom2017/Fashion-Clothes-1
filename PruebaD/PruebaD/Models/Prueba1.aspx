@@ -20,6 +20,7 @@
         </div>
     <%} %>
     </div>
+        <asp:Label ID="Label1" runat="server" Text="Te amo "></asp:Label>
     </form>
 </body>
 </html>
