@@ -24,7 +24,7 @@
       <h1><a href="default.aspx"; style="color:white; background-color:purple;">Fashion Clothes</a></h1>
       <p>ASP.net C#</p>
     </div>
-    <div id="topnav" style="position:absolute; left:240px; top:40px;"><!-- menu -->
+    <div id="topnav" style="position:absolute; left:240px; top:40px; height: 68px;" ><!-- menu -->
       <ul>
         <li class="active"><a href="default.aspx">Inicio</a></li>
         <li><a href="Catalogo.aspx">Catalogo</a></li>
@@ -32,7 +32,7 @@
            <li><a href="Perfil.aspx">Perfil</a></li>
         <li><a href="#">Opciones de usuario</a>
           <ul>
-            <li><a href="#">Actualizar</a></li>
+            <li><a href="Iniciar Sesion.aspx">Iniciar Sesion</a></li>
             <li><a href="pagereporteclientes.aspx">Compras</a></li>            
               <li><a href=" pagevistaventas.aspx">Ventas</a></li>
               <li><a href="Contactos.aspx">Contactos</a></li>

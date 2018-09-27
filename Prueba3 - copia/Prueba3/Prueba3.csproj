@@ -97,6 +97,7 @@
   <ItemGroup>
     <Content Include="Contactos.aspx" />
     <Content Include="css1\bootstrap.min.css" />
+    <Content Include="Iniciar Sesion.aspx" />
     <Content Include="Perfil.aspx" />
     <Content Include="Imagenes\login.jpg" />
     <Content Include="packages.config" />
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="Contactos.aspx.designer.cs">
       <DependentUpon>Contactos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Iniciar Sesion.aspx.cs">
+      <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Iniciar Sesion.aspx.designer.cs">
+      <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
