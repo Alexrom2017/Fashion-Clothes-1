@@ -167,6 +167,7 @@
     <Compile Include="Iniciar Sesion.aspx.designer.cs">
       <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login1.cs" />
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

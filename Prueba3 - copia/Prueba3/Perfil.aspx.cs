@@ -11,7 +11,21 @@ namespace Prueba3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] == null)
+            {
+                Response.Redirect("~/Inicio Sesion.aspx");
 
+            }
+            else
+            {
+                usuario.Text = Convert.ToString(Session["user"]);
+            }
+        }
+
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session["user"] = null;
+            Response.Redirect("~/Iniciar Sesion.aspx");
         }
     }
 }

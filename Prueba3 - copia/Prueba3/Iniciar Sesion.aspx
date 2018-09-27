@@ -31,7 +31,7 @@
                         <br />
                     <br />
  
-                    <asp:Button ID="btnIniciarSesion" runat="server" Height="43px" Text="Iniciar" Width="400px" ForeColor="#FFFFFF" class="btn btn-primary" />
+                    <asp:Button ID="btnIniciarSesion" runat="server" Height="43px" Text="Iniciar" Width="400px" ForeColor="#FFFFFF" class="btn btn-primary" OnClick="btnIniciarSesion_Click" />
                     <br />
                     <br />
                 <br />
