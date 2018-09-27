@@ -95,6 +95,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarProductos.aspx" />
     <Content Include="Contactos.aspx" />
     <Content Include="css1\bootstrap.min.css" />
     <Content Include="Iniciar Sesion.aspx" />
@@ -127,6 +128,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarProductos.aspx.cs">
+      <DependentUpon>AgregarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarProductos.aspx.designer.cs">
+      <DependentUpon>AgregarProductos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo.aspx.cs">
       <DependentUpon>Catalogo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
