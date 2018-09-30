@@ -19,12 +19,12 @@
     <form id="form1" runat="server">
 <!-- ####################################################################################################### -->
 <div class="wrapper col1" style="background-color:purple;">
-  <div id="header" style="background-color:purple;">
-    <div id="logo" style="background-color:purple; color:white" class="auto-style1">
-      <h1><a href="default.aspx"; style="color:white; background-color:purple;">Fashion Clothes</a></h1>
+  <div id="header" style="background-color:purple; position:fixed; width:100%; /*box-shadow:1px 2px 1px rgba(0,0,0,.5);*/ top:0;/*padding-left:50%; padding-right:50%;*/">
+    <div id="logo" style="background-color:purple; margin-left:110px; color:white" class="auto-style1;">
+      <h1><a href="default.aspx"; style="color:white; background-color:purple; text-decoration:none;">Fashion Clothes</a></h1>
       <p>ASP.net C#</p>
     </div>
-    <div id="topnav" style="position:absolute; left:240px; top:40px; height: 68px;" ><!-- menu -->
+    <div id="topnav" style="position:absolute; margin-left:240px; left:260px; top:40px; height: 68px; " ><!-- menu -->
       <ul>
         <li class="active"><a href="default.aspx">Inicio</a></li>
         <li><a href="Catalogo.aspx">Catalogo</a></li>
@@ -47,7 +47,7 @@
 </div>
 
 <!-- ####################################################################################################### -->
-<div class="wrapper col3">
+<div class="wrapper col3" style="margin-top:170px;">
 
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
