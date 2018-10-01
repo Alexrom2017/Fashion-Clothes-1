@@ -7,6 +7,7 @@
         <head>
             <link href="css1/bootstrap.min.css" type="text/css" rel="stylesheet">
         </head>
+        <br />
 
     <asp:Panel ID="Panel1" runat="server" BackColor="#95AD19"  >
                     <br /> 
@@ -34,8 +35,9 @@
                     <asp:Button ID="btnIniciarSesion" runat="server" Height="43px" Text="Iniciar" Width="400px" ForeColor="#FFFFFF" class="btn btn-primary" OnClick="btnIniciarSesion_Click" />
                     <br />
                     <br />
-                <br />
+          
                 </asp:Panel>
+        <br />
                 </center>
         </html>
 

@@ -9,7 +9,7 @@
         </head>
     <br />
     <div class="wrapper col2" style="height: 321px; margin-top: 0">
-  <div id="contenedor" style="background-color:#95AD19; border:medium groove yellow; height: 319px;">
+  <div id="contenedor" style="background-color:darkgrey; border:medium groove yellow; height: 319px;">
     <div id="featured_content">
       <ul>
         <li style="left: 0px; top: 0px; height: 328px; width: 867px"><img src="Imagenes/fondo1.jpg" alt=""; style="width: 398px; height: 246px"  />
@@ -39,11 +39,7 @@
     <a href="javascript:void(0);" id="featured-item-prev" style="left: 928px; top: 255px; width: 56px; height: 94px;"><img src="layout/images/prev.png" alt="" style="background-color:forestgreen; width: 60px; height: 98px;" /></a> <a href="javascript:void(0);" id="featured-item-next" style="right: 52px; top: 257px; width: 55px; height: 95px;"><img src="layout/images/next.png" alt="" style="width: 55px; height: 97px" /></a> </div>
 </div>
     <br />
-
-                
-                  
-                        
-<br />
+              
     </html>
 </asp:Content>
 

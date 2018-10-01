@@ -42,7 +42,9 @@
                 <br />
                 <asp:TextBox ID="txtTelefono" runat="server" class="form-control" Width="100%"></asp:TextBox>
                 <br />
-                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" Width="100%" class="form-control"/>
+                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" Width="100%" class="btn btn-primary"/>
+                <br />
+                <br />
                 <br />
                 </form>
                 </div>
