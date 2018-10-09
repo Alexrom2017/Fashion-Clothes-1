@@ -44,6 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -77,6 +83,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -96,6 +104,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AgregarProductos.aspx" />
+    <Content Include="b1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>b1.Context.cs</LastGenOutput>
+      <DependentUpon>b1.edmx</DependentUpon>
+    </Content>
+    <Content Include="b1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>b1.edmx</DependentUpon>
+      <LastGenOutput>b1.cs</LastGenOutput>
+    </Content>
+    <Content Include="base1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>base1.edmx</DependentUpon>
+      <LastGenOutput>base1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="base1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>base1.edmx</DependentUpon>
+      <LastGenOutput>base1.cs</LastGenOutput>
+    </Content>
     <Content Include="Contactos.aspx" />
     <Content Include="css1\bootstrap.min.css" />
     <Content Include="Iniciar Sesion.aspx" />
@@ -106,6 +134,20 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="MasterPage.master" />
+    <EntityDeploy Include="b1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>b1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="b1.edmx.diagram">
+      <DependentUpon>b1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="base1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>base1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="base1.edmx.diagram">
+      <DependentUpon>base1.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -135,6 +177,36 @@
     <Compile Include="AgregarProductos.aspx.designer.cs">
       <DependentUpon>AgregarProductos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="b1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>b1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="b1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>b1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="b1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>b1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="base1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>base1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="base1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="base1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>base1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo.aspx.cs">
       <DependentUpon>Catalogo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,12 +214,21 @@
     <Compile Include="Catalogo.aspx.designer.cs">
       <DependentUpon>Catalogo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CategoriaProducto.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.aspx.cs">
       <DependentUpon>Clientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Clientes.aspx.designer.cs">
       <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DatosPersonales.cs">
+      <DependentUpon>base1.tt</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -160,6 +241,18 @@
     <Compile Include="Contactos.aspx.designer.cs">
       <DependentUpon>Contactos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DetalleCompra.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetallePedido.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntregaPedidos.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Iniciar Sesion.aspx.cs">
       <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +261,9 @@
       <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login1.cs" />
+    <Compile Include="Pedidos.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,9 +283,29 @@
       <DependentUpon>pagevistaventas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Productos.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Promociones.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedores.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sugerencias.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <DependentUpon>base1.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

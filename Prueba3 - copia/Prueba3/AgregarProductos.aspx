@@ -55,7 +55,7 @@
         <br />
         <br />
                         <asp:Label ID="Label4" runat="server" Text="Nombre:"></asp:Label>
-                        <asp:TextBox ID="TextBox3" runat="server" class="form-control" Width="100%"></asp:TextBox>
+                        <asp:TextBox ID="TextNam" runat="server" class="form-control" Width="100%"></asp:TextBox>
         <br />
         <br />
                         <asp:Label ID="Label2" runat="server" Text="Descripcion:"></asp:Label>
@@ -82,7 +82,7 @@
         <br />
         <br />
         <br />      
-                        <asp:Button ID="Button1" runat="server" Text="Guardar" class="btn btn-primary" Width="100%"/>
+                        <asp:Button ID="Button1" runat="server" Text="Guardar" class="btn btn-primary" Width="100%" OnClick="Button1_Click"/>
         <br />              <br />
                         <br />
                         <br />

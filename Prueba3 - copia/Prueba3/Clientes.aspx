@@ -29,10 +29,10 @@
                 <br />
                 <asp:Label ID="Label6" runat="server" Text="Contraseña"></asp:Label>
                 <br />
-                <asp:TextBox ID="txtContraseña" runat="server" class="form-control" Width="100%"></asp:TextBox>
+                <asp:TextBox ID="txtContraseña" runat="server" class="form-control" Width="100%" EnableTheming="False" TextMode="Password"></asp:TextBox>
                 <br />
                 <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña"></asp:Label>
-                <asp:TextBox ID="txtConfirmarContraseña" runat="server" class="form-control" Width="100%"></asp:TextBox>
+                <asp:TextBox ID="txtConfirmarContraseña" runat="server" class="form-control" Width="100%" TextMode="Password"></asp:TextBox>
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Direccion:"></asp:Label>
                 <br />
@@ -42,7 +42,7 @@
                 <br />
                 <asp:TextBox ID="txtTelefono" runat="server" class="form-control" Width="100%"></asp:TextBox>
                 <br />
-                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" Width="100%" class="btn btn-primary"/>
+                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" Width="100%" class="btn btn-primary" OnClick="btnAgregar_Click"/>
                 <br />
                 <br />
                 <br />

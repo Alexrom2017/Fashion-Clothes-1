@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed162438d88a469c80dcc79c09d92fd3" Name="Diagram1">
+        <EntityTypeShape EntityType="baseappModel.CategoriaProducto" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Compras" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.DatosPersonales" Width="1.5" PointX="7.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.DetalleCompra" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.DetallePedido" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Empresa" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.EntregaPedidos" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Pedidos" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Productos" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Promociones" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Proveedores" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Stock" Width="1.5" PointX="5.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Sugerencias" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="baseappModel.Usuarios" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="baseappModel.FK_Productos_CategoriaProducto1" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_DetalleCompra_Compras" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_DetalleCompra_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_DetallePedido_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_DetallePedido_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_Usuarios_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_Pedidos_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_Promociones_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_Stock_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_Sugerencias_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.FK_Sugerencias_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="baseappModel.Provedores_to_Compras" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
