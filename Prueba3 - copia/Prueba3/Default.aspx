@@ -9,7 +9,7 @@
         </head>
     <br />
     <div class="wrapper col2" style="height: 321px; margin-top: 0">
-  <div id="contenedor" style="background-color:darkgrey; border:medium groove yellow; height: 319px;">
+  <div id="contenedor" style="background-color:#9D9D93; border:medium groove yellow; height: 319px;">
     <div id="featured_content">
       <ul>
         <li style="left: 0px; top: 0px; height: 328px; width: 867px"><img src="Imagenes/fondo1.jpg" alt=""; style="width: 398px; height: 246px"  />

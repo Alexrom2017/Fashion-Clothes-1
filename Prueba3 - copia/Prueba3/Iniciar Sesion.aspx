@@ -9,7 +9,7 @@
         </head>
         <br />
 
-    <asp:Panel ID="Panel1" runat="server" BackColor="#95AD19"  >
+    <asp:Panel ID="Panel1" runat="server" BackColor="#9D9D93"  >
                     <br /> 
                     <center>
                     <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#CC00CC" Text="Iniciar Sesion"></asp:Label>
@@ -17,9 +17,7 @@
                     <br />
 
                     <asp:Label ID="Label2" runat="server" ForeColor="#6600CC" Text="Usuario"></asp:Label>
-                   
-                    <br />
-                   
+                  <br />                   
                     <asp:TextBox ID="txtNombreUsuario" runat="server" Width="400px" ForeColor="#3333FF" class="form-control"></asp:TextBox>
                     <br />
       

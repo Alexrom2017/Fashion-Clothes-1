@@ -21,14 +21,14 @@ namespace Prueba3
             this.DetallePedido = new HashSet<DetallePedido>();
             this.Promociones = new HashSet<Promociones>();
             this.Stock = new HashSet<Stock>();
-            this.Sugerencias = new HashSet<Sugerencias>();
         }
     
         public int IdProductos { get; set; }
         public string Nombre { get; set; }
+        public string Descripcion { get; set; }
+        public string Proveedor { get; set; }
         public decimal PrecioCompra { get; set; }
         public decimal PrecioVenta { get; set; }
-        public string Detalles { get; set; }
         public Nullable<int> IdCategoria { get; set; }
     
         public virtual CategoriaProducto CategoriaProducto { get; set; }
@@ -40,7 +40,5 @@ namespace Prueba3
         public virtual ICollection<Promociones> Promociones { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stock> Stock { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sugerencias> Sugerencias { get; set; }
     }
 }

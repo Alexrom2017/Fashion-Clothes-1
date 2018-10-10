@@ -21,7 +21,7 @@ namespace Prueba3
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            var conn = new proyect();
+            var conn = new Base();
             var n1 = new Usuarios()
             {
 

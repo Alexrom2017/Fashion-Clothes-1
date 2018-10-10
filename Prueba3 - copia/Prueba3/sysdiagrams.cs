@@ -12,14 +12,12 @@ namespace Prueba3
     using System;
     using System.Collections.Generic;
     
-    public partial class Sugerencias
+    public partial class sysdiagrams
     {
-        public int IdSugerencias { get; set; }
-        public int IdProducto { get; set; }
-        public int IdUsuario { get; set; }
-        public string Detalles { get; set; }
-    
-        public virtual Productos Productos { get; set; }
-        public virtual Usuarios Usuarios { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

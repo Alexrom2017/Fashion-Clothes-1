@@ -18,7 +18,6 @@ namespace Prueba3
         public Usuarios()
         {
             this.Pedidos = new HashSet<Pedidos>();
-            this.Sugerencias = new HashSet<Sugerencias>();
         }
     
         public int IdUsuario { get; set; }
@@ -33,7 +32,5 @@ namespace Prueba3
         public virtual Empresa Empresa { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedidos> Pedidos { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sugerencias> Sugerencias { get; set; }
     }
 }

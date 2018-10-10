@@ -13,10 +13,10 @@ namespace Prueba3
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class proyect : DbContext
+    public partial class Base : DbContext
     {
-        public proyect()
-            : base("name=proyect")
+        public Base()
+            : base("name=Base")
         {
         }
     
@@ -37,7 +37,7 @@ namespace Prueba3
         public virtual DbSet<Promociones> Promociones { get; set; }
         public virtual DbSet<Proveedores> Proveedores { get; set; }
         public virtual DbSet<Stock> Stock { get; set; }
-        public virtual DbSet<Sugerencias> Sugerencias { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }
