@@ -9,7 +9,6 @@ namespace Prueba3
 {
     public partial class Formulario_web12 : System.Web.UI.Page
     {
-        Login1 conexion1 = new Login1();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,15 +16,34 @@ namespace Prueba3
 
         protected void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            if (txtNombreUsuario.Text == conexion1.Usuario1 && txtContraseña.Text == conexion1.Contra1)
+
+            //var conn = new Base();
+            //var n1 = new Usuarios();
+
+            //if (txtNombreUsuario.Text == n1.Correo && txtContraseña.Text == n1.Contraseña)
+            //{
+            //    //Label1 = Convert.ToString(n1.Nombre).ToString(); 
+            //    Response.Redirect("~/Perfil.aspx");
+            //}
+            //else
+            //{
+            //    Response.Write("<script>alert('Datos Incorrectos')</script>");
+            //}
+
+            Login1 n1 = new Login1();
+            n1.usuario = this.txtNombreUsuario.Text;
+            n1.pass = this.txtContraseña.Text;
+
+            if (n1.Buscar() == true)
             {
-                Session["user"] = txtNombreUsuario.Text;
-                Response.Redirect("~/Perfil.aspx");
+                Response.Redirect("~/Contactos.aspx");
             }
             else
             {
                 Response.Write("<script>alert('Datos Incorrectos')</script>");
             }
+
+           
         }
     }
 }

@@ -12,13 +12,18 @@ namespace Prueba3
     using System;
     using System.Collections.Generic;
     
-    public partial class Stock
+    public partial class TiposdeUsuario
     {
-        public int IdStock { get; set; }
-        public int IdProducto { get; set; }
-        public int CantidadTotal { get; set; }
-        public string Tallas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TiposdeUsuario()
+        {
+            this.Usuarios = new HashSet<Usuarios>();
+        }
     
-        public virtual Productos Productos { get; set; }
+        public int IdTipos { get; set; }
+        public string Descripcion { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuarios> Usuarios { get; set; }
     }
 }

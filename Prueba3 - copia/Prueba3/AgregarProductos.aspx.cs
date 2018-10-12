@@ -22,8 +22,8 @@ namespace Prueba3
 
                 //IdProductos = 1,
                 Nombre = TextNom.Text,
-                Descripcion = TextDesp.Text,
-                Proveedor = TextProe.Text,
+                Detalles = TextDesp.Text,
+                //Proveedor = TextProe.Text,
                 PrecioCompra = Convert.ToDecimal(txtPrecioCompra.Text),
                 PrecioVenta = Convert.ToDecimal(txtPrecioVenta.Text),
                 IdCategoria = 1,
