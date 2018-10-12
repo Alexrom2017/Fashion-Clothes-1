@@ -15,7 +15,7 @@
         }
     </style>
 </head>
-<body id="top" style="background-color:darkkhaki;">
+<body id="top" style="background-color:darkkhaki; margin-left:5%; margin-right:5%;">
     <form id="form1" runat="server">
 <!-- ####################################################################################################### -->
 <div class="wrapper col1" style="background-color:beige;">

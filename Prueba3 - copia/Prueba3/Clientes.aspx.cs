@@ -21,7 +21,7 @@ namespace Prueba3
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            var conn = new Prueba16();
+            var conn = new bass();
             var n1 = new Usuarios()
             {
 
@@ -31,6 +31,7 @@ namespace Prueba3
                 NickName = txtNickName.Text,
                 Contraseña = txtContraseña.Text,
                 TipoUsuaro = 2,
+                Direccion = txtDireccion.Text,
                 Correo = txtCorreo.Text,
                 Telefono = txtTelefono.Text
             };

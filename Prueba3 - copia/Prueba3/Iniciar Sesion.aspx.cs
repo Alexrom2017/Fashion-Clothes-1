@@ -36,7 +36,7 @@ namespace Prueba3
 
             if (n1.Buscar() == true)
             {
-                Response.Redirect("~/Contactos.aspx");
+                Response.Redirect("~/Perfil.aspx");
             }
             else
             {

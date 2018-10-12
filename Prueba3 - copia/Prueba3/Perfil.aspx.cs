@@ -9,22 +9,24 @@ namespace Prueba3
 {
     public partial class Formulario_web1 : System.Web.UI.Page
     {
+        bass b1 = new bass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] == null)
+            
+            if (b1.Usuarios == null)
             {
                 Response.Redirect("~/Inicio Sesion.aspx");
 
             }
             else
             {
-                usuario.Text = Convert.ToString(Session["user"]);
+                usuario.Text = Convert.ToString(b1.Usuarios.Where(x => x.IdUsuario == 1).First().NickName);
             }
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            Session["user"] = null;
+            b1.Usuarios = null;
             Response.Redirect("~/Iniciar Sesion.aspx");
         }
     }

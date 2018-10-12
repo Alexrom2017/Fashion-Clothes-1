@@ -13,10 +13,10 @@ namespace Prueba3
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Base : DbContext
+    public partial class bass : DbContext
     {
-        public Base()
-            : base("name=Base")
+        public bass()
+            : base("name=bass")
         {
         }
     
@@ -27,17 +27,16 @@ namespace Prueba3
     
         public virtual DbSet<CategoriaProducto> CategoriaProducto { get; set; }
         public virtual DbSet<Compras> Compras { get; set; }
-      
         public virtual DbSet<DetalleCompra> DetalleCompra { get; set; }
         public virtual DbSet<DetallePedido> DetallePedido { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
-        public virtual DbSet<EntregaPedidos> EntregaPedidos { get; set; }
         public virtual DbSet<Pedidos> Pedidos { get; set; }
         public virtual DbSet<Productos> Productos { get; set; }
         public virtual DbSet<Promociones> Promociones { get; set; }
         public virtual DbSet<Proveedores> Proveedores { get; set; }
         public virtual DbSet<Stock> Stock { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<TiposdeUsuario> TiposdeUsuario { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

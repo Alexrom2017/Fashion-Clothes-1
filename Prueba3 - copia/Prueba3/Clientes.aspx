@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Clientes.aspx.cs" Inherits="Prueba3.Clientes" %>
+           <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
            <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
                <br />
                <!DOCTYPE html>
@@ -15,6 +16,8 @@
                 <img class="border border-primary"  alt="lel" src="Imagenes/login.jpg" />
       </div>       
    <div class="col-md-8">
+       <asp:ScriptManager ID="ScriptManager1" runat="server">
+       </asp:ScriptManager>
        <br />
        <form action="" method="post" enctype="multipart/form-data">
                 <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label>
@@ -29,6 +32,8 @@
                 <asp:Label ID="Label6" runat="server" Text="Contraseña"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtContraseña" runat="server" class="form-control" Width="100%" EnableTheming="False" TextMode="Password"></asp:TextBox>
+                <ajaxToolkit:PasswordStrength ID="txtContraseña_PasswordStrength" runat="server" BehaviorID="txtContraseña_PasswordStrength" CalculationWeightings="50;15;15;20" PrefixText="" TargetControlID="txtContraseña" TextStrengthDescriptions="Bajo;Medio;Alto">
+                </ajaxToolkit:PasswordStrength>
                 <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña"></asp:Label>
                 <asp:TextBox ID="txtConfirmarContraseña" runat="server" class="form-control" Width="100%" TextMode="Password"></asp:TextBox>
                 <asp:Label ID="Label2" runat="server" Text="Direccion:"></asp:Label>
