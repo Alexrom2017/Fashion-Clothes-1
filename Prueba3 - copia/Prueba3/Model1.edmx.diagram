@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a6b9fc183b54778b88c5d8a5e0613d9" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.CategoriaProducto" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Compras" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DatosPersonales" Width="1.5" PointX="7.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DetalleCompra" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DetallePedido" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Empresa" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EntregaPedidos" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Pedidos" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Productos" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Promociones" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Proveedores" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Stock" Width="1.5" PointX="5.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sugerencias" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="9.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TiposdeUsuario" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Usuarios" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Productos_CategoriaProducto1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DetalleCompra_Compras" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DetalleCompra_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DetallePedido_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DetallePedido_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Usuarios_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Pedidos_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Promociones_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Stock_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Sugerencias_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Sugerencias_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Usuarios_TiposdeUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.Provedores_to_Compras" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -15,16 +15,16 @@
         }
     </style>
 </head>
-<body id="top" style="background-color:darkkhaki; margin-left:5%; margin-right:5%;">
+<body id="top" style="background-color:darkkhaki; margin-left:5%; margin-right:5%";>
     <form id="form1" runat="server">
 <!-- ####################################################################################################### -->
 <div class="wrapper col1" style="background-color:beige;">
-  <div id="header" style="background-color:beige; position:fixed; width:100%; /*box-shadow:1px 2px 1px rgba(0,0,0,.5);*/ top:0;/*padding-left:50%; padding-right:50%;*/">
+  <div id="header" style="margin-right:5%; background-color:beige; position:fixed; width:90%; /*box-shadow:1px 2px 1px rgba(0,0,0,.5);*/ top:0;/*padding-left:50%; padding-right:50%;*/">
     <div id="logo" style="background-color:beige; margin-left:110px; color:white" class="auto-style1;">
       <h1><a href="default.aspx"; style="color:black; background-color:beige; text-decoration:none;">Fashion Clothes</a></h1>
       <p class="" style="color:black;">ASP.net C#</p>
     </div>
-    <div id="topnav" style="position:absolute; margin-left:240px; left:260px; top:40px; height: 68px; " ><!-- menu -->
+    <div  class="active has-sub" id="topnav" style="position:fixed; margin-left:240px; left:260px; top:40px; height: 68px; " ><!-- menu -->
       <ul>
         <li class="active"><a href="default.aspx">Inicio</a></li>
         <li><a href="Catalogo.aspx">Catalogo</a></li>
@@ -59,6 +59,8 @@
 
   </div>
 <!-- ####################################################################################################### -->
+<br />
+
 <div class="wrapper col5" style="background-color:beige;">
   <div id="copyright">
       <center>

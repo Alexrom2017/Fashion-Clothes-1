@@ -9,7 +9,7 @@ namespace Prueba3
 {
     public partial class Formulario_web1 : System.Web.UI.Page
     {
-        bass b1 = new bass();
+        n1 b1 = new n1();
         protected void Page_Load(object sender, EventArgs e)
         {
             

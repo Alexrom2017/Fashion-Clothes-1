@@ -30,11 +30,11 @@ namespace Prueba3
             //    Response.Write("<script>alert('Datos Incorrectos')</script>");
             //}
 
-            Login1 n1 = new Login1();
-            n1.usuario = this.txtNombreUsuario.Text;
-            n1.pass = this.txtContraseña.Text;
+            Login1 n2 = new Login1 ();
+            n2.usuario = this.txtNombreUsuario.Text;
+            n2.pass = this.txtContraseña.Text;
 
-            if (n1.Buscar() == true)
+            if (n2.Buscar() == true)
             {
                 Response.Redirect("~/Perfil.aspx");
             }

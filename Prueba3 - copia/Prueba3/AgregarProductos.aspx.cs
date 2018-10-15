@@ -16,14 +16,14 @@ namespace Prueba3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var conn = new bass();
+            var conn = new n1();
             var n2 = new Productos()
             {
 
                 IdProductos = 1,
                 Nombre = TextNom.Text,
-                Descripcion = TextDesp.Text,
-                Proveedor = TextProe.Text,
+                //Descripcion = TextDesp.Text,
+                //Proveedor = TextProe.Text,
                 PrecioCompra = Convert.ToDecimal(txtPrecioCompra.Text),
                 PrecioVenta = Convert.ToDecimal(txtPrecioVenta.Text),
                 IdCategoria = 1,

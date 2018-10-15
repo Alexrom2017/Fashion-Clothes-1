@@ -12,13 +12,15 @@ namespace Prueba3
     using System;
     using System.Collections.Generic;
     
-    public partial class Stock
+    public partial class EntregaPedidos
     {
-        public int IdStock { get; set; }
-        public int IdProducto { get; set; }
+        public int IdEntrega { get; set; }
+        public int IdPedido { get; set; }
+        public int IdEmpleado { get; set; }
         public int CantidadTotal { get; set; }
-        public string Tallas { get; set; }
-    
-        public virtual Productos Productos { get; set; }
+        public string Direccion { get; set; }
+        public string FormaEntrega { get; set; }
+        public decimal PresioTotal { get; set; }
+        public System.DateTime FechaEntrega { get; set; }
     }
 }
