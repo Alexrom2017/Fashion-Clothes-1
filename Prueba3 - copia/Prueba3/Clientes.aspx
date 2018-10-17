@@ -29,7 +29,7 @@
                 <asp:Button ID="btnSubir" runat="server" Text="Agregar Imagen" class="btn btn-primary" Width="50%" OnClick="btnSubir_Click"/>
 
                 <br />
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BASE AL FIN BUENA X3ConnectionString3 %>" SelectCommand="SELECT [Imagen] FROM [Imagenes]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:baseappConnectionString3 %>" SelectCommand="SELECT [Imagen] FROM [Imagenes]"></asp:SqlDataSource>
 
             </div>       
        
@@ -44,8 +44,12 @@
                 <br />
                 <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label>
                 <asp:TextBox ID="txtNombre" runat="server" class="form-control" Width="50%"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe ingresar su nombre" BorderStyle="Dashed"></asp:RequiredFieldValidator>
+                <br />
                 <asp:Label ID="Label7" runat="server" Text="Apellido"></asp:Label>
                 <asp:TextBox ID="txtApellido" runat="server" class="form-control" Width="50%"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BorderStyle="Dashed" ControlToValidate="txtApellido" ErrorMessage="Debe ingresar su apellido"></asp:RequiredFieldValidator>
+                <br />
                 <asp:Label ID="Label5" runat="server" Text="Correo" ></asp:Label>
                 <br />
                 <asp:TextBox ID="txtCorreo" runat="server" class="form-control" Width="50%"></asp:TextBox>

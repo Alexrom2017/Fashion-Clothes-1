@@ -16,7 +16,7 @@ namespace Prueba3
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var conn = new n1();
+            var conn = new Nueva3();
             var n2 = new Productos()
             {
 
