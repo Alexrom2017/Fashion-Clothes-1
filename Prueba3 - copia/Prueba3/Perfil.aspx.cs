@@ -9,7 +9,7 @@ namespace Prueba3
 {
     public partial class Formulario_web1 : System.Web.UI.Page
     {
-        Nueva3 b1 = new Nueva3();
+        OtraMas b1 = new OtraMas();
         protected void Page_Load(object sender, EventArgs e)
         {
             

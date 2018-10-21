@@ -26,7 +26,7 @@
                 Archivo:
                 <asp:FileUpload Width="50%" ID="FuploadImgen" accept=".jpg" runat="server" CssClass="form-control"  />
                 <br />
-                <asp:Button ID="btnSubir" runat="server" Text="Agregar Imagen" class="btn btn-primary" Width="50%" OnClick="btnSubir_Click"/>
+                <asp:Button ID="btnSubir" runat="server" Text="Vista Previa" class="btn btn-primary" Width="50%" OnClick="btnSubir_Click"/>
 
                 <br />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:baseappConnectionString3 %>" SelectCommand="SELECT [Imagen] FROM [Imagenes]"></asp:SqlDataSource>

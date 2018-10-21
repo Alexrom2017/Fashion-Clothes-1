@@ -12,7 +12,7 @@ namespace Prueba3
 {
     public partial class Clientes : System.Web.UI.Page
     {
-        string cadenaConexion = @"Data Source=.;Initial Catalog=baseapp;Integrated Security=True;";
+        string cadenaConexion = @"Data Source=.;Initial Catalog='BASE AL FIN BUENA X3';Integrated Security=True";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,8 +26,9 @@ namespace Prueba3
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            var conn = new Nueva3();
-            var n1 = new Usuarios()
+            var conn = new OtraMas();
+            SqlConnection n2 = new SqlConnection(cadenaConexion);
+            var User1 = new Usuarios()
             {
 
                 IdEmpresa = 1,
@@ -40,12 +41,8 @@ namespace Prueba3
                 Correo = txtCorreo.Text,
                 Telefono = txtTelefono.Text
             };
-            conn.Usuarios.Add(n1);
-            conn.SaveChanges();
-            Response.Redirect("~/Iniciar Sesion.aspx");
 
-            ////****************************************************************************************************************************
-
+            var cmd = new SqlCommand(cadenaConexion);
             int tamaño = FuploadImgen.PostedFile.ContentLength;
             byte[] ImagenOriginal = new byte[tamaño];
 
@@ -54,48 +51,56 @@ namespace Prueba3
             Bitmap imagenOriginalBinaria = new Bitmap(FuploadImgen.PostedFile.InputStream);
 
             //Insertar en la base de datos
-            SqlConnection n2 = new SqlConnection(cadenaConexion);
-            SqlCommand cmd = new SqlCommand();
 
             cmd.CommandText = "INSERT INTO Imagenes(Imagen) VALUES (@imagen)";
             cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = ImagenOriginal;
-
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = n2;
             n2.Open();
             cmd.ExecuteNonQuery();
+            conn.Usuarios.Add(User1);
+            conn.SaveChanges();
+            Response.Redirect("~/Iniciar Sesion.aspx");
 
-            string imagenDataURL64 = "data:image/jpg;base64," + Convert.ToBase64String(ImagenOriginal);
-            ImgPreview.ImageUrl = imagenDataURL64;
+
+            ////****************************************************************************************************************************
+
+
 
         }
 
         protected void btnSubir_Click(object sender, EventArgs e)
         {
-            //int tamaño = FuploadImgen.PostedFile.ContentLength;
-            //byte[] ImagenOriginal = new byte[tamaño];
+            int tamaño = FuploadImgen.PostedFile.ContentLength;
+            byte[] ImagenOriginal = new byte[tamaño];
 
-            //FuploadImgen.PostedFile.InputStream.Read(ImagenOriginal, 0, tamaño);
+            FuploadImgen.PostedFile.InputStream.Read(ImagenOriginal, 0, tamaño);
 
-            //Bitmap imagenOriginalBinaria = new Bitmap(FuploadImgen.PostedFile.InputStream);
-
-            ////Insertar en la base de datos
-            //SqlConnection n2 = new SqlConnection(cadenaConexion);
-            //SqlCommand cmd = new SqlCommand();
-
-            //cmd.CommandText = "INSERT INTO Imagenes(Imagen) VALUES (@imagen)";
-            //cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = ImagenOriginal;
+            Bitmap imagenOriginalBinaria = new Bitmap(FuploadImgen.PostedFile.InputStream);
 
 
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Connection = n2;
-            //n2.Open();
-            //cmd.ExecuteNonQuery();
+            System.Drawing.Image nImage;
+            int tamañonew = 200;
+            nImage = Redimensionar(imagenOriginalBinaria, tamañonew);
+            byte[] bImagen = new byte[tamañonew];
+            ImageConverter convert = new ImageConverter();
+            bImagen = (byte[])convert.ConvertTo(nImage, typeof(byte[]));
 
-            //string imagenDataURL64 = "data:image/jpg;base64," + Convert.ToBase64String(ImagenOriginal);
-            //ImgPreview.ImageUrl = imagenDataURL64;
 
+            string imagenDataURL64 = "data:image/jpg;base64," + Convert.ToBase64String(bImagen);
+            ImgPreview.ImageUrl = imagenDataURL64;
+
+        }
+        public System.Drawing.Image Redimensionar(System.Drawing.Image ImagenOriginal, int Alto)
+        {
+            var Radio = (double)Alto / ImagenOriginal.Height;
+            var NuevoAncho = (int)(ImagenOriginal.Width * Radio);
+            var NuevoAlto = (int)(ImagenOriginal.Height * Radio);
+            var NuevaImagen = new Bitmap(NuevoAncho, NuevoAlto);
+            var g = Graphics.FromImage(NuevaImagen);
+            g.DrawImage(ImagenOriginal, 0, 0, NuevoAncho, NuevoAlto);
+            return NuevaImagen;
         }
     }
 }

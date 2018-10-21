@@ -17,7 +17,7 @@ namespace Prueba3
 
         public Conexion()
         {
-            this.cadenaConexion = (@"Data Source=.;Initial Catalog=baseapp;Integrated Security=True");
+            this.cadenaConexion = (@"Data Source=.;Initial Catalog='BASE AL FIN BUENA X3' ;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
             this.cnn = new SqlConnection(this.cadenaConexion);
         }
 
