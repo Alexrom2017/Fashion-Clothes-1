@@ -31,7 +31,7 @@
                     <br />
  
                     <asp:Button ID="btnIniciarSesion" runat="server" Height="43px" Text="Iniciar" Width="400px" ForeColor="#FFFFFF" class="btn btn-primary" OnClick="btnIniciarSesion_Click" />
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BASE AL FIN BUENA X3ConnectionString3 %>" SelectCommand="SELECT [NickName], [Contraseña] FROM [Usuarios]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [NickName], [Contraseña] FROM [Usuarios]"></asp:SqlDataSource>
                     <br />
                     <br />
           

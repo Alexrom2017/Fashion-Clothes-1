@@ -17,7 +17,7 @@ namespace Prueba3
 
         public Conexion()
         {
-            this.cadenaConexion = (@"Data Source=.;Initial Catalog='BASE AL FIN BUENA X3' ;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            this.cadenaConexion = (@"Data Source=sql7003.site4now.net;Persist Security Info=True;User ID=DB_A4212A_FashionClothes_admin;Password=75082282Alex");
             this.cnn = new SqlConnection(this.cadenaConexion);
         }
 

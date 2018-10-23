@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DB_A4212A_FashionClothesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CategoriaProducto">
           <Key>
             <PropertyRef Name="IdCategoria" />
@@ -350,7 +350,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ModelStoreContainer">
+        <EntityContainer Name="DB_A4212A_FashionClothesModelStoreContainer">
           <EntitySet Name="CategoriaProducto" EntityType="Self.CategoriaProducto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Compras" EntityType="Self.Compras" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" Schema="dbo" store:Type="Tables" />
@@ -430,7 +430,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DB_A4212A_FashionClothesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="CategoriaProducto">
           <Key>
             <PropertyRef Name="IdCategoria" />
@@ -774,7 +774,7 @@
           <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="OtraMas" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="N1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CategoriaProducto" EntityType="Self.CategoriaProducto" />
           <EntitySet Name="Compras" EntityType="Self.Compras" />
           <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" />
@@ -850,9 +850,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="OtraMas">
+        <EntityContainerMapping StorageEntityContainer="DB_A4212A_FashionClothesModelStoreContainer" CdmEntityContainer="N1">
           <EntitySetMapping Name="CategoriaProducto">
-            <EntityTypeMapping TypeName="Model.CategoriaProducto">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.CategoriaProducto">
               <MappingFragment StoreEntitySet="CategoriaProducto">
                 <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -861,7 +861,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Compras">
-            <EntityTypeMapping TypeName="Model.Compras">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Compras">
               <MappingFragment StoreEntitySet="Compras">
                 <ScalarProperty Name="IdCompras" ColumnName="IdCompras" />
                 <ScalarProperty Name="IdEmpleados" ColumnName="IdEmpleados" />
@@ -870,7 +870,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DatosPersonales">
-            <EntityTypeMapping TypeName="Model.DatosPersonales">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.DatosPersonales">
               <MappingFragment StoreEntitySet="DatosPersonales">
                 <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -881,7 +881,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DetalleCompra">
-            <EntityTypeMapping TypeName="Model.DetalleCompra">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.DetalleCompra">
               <MappingFragment StoreEntitySet="DetalleCompra">
                 <ScalarProperty Name="IdDetalleCompra" ColumnName="IdDetalleCompra" />
                 <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
@@ -893,7 +893,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DetallePedido">
-            <EntityTypeMapping TypeName="Model.DetallePedido">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.DetallePedido">
               <MappingFragment StoreEntitySet="DetallePedido">
                 <ScalarProperty Name="IdDetallePedido" ColumnName="IdDetallePedido" />
                 <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
@@ -905,7 +905,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Empresa">
-            <EntityTypeMapping TypeName="Model.Empresa">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Empresa">
               <MappingFragment StoreEntitySet="Empresa">
                 <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
                 <ScalarProperty Name="NombreEmpresa" ColumnName="NombreEmpresa" />
@@ -915,7 +915,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EntregaPedidos">
-            <EntityTypeMapping TypeName="Model.EntregaPedidos">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.EntregaPedidos">
               <MappingFragment StoreEntitySet="EntregaPedidos">
                 <ScalarProperty Name="IdEntrega" ColumnName="IdEntrega" />
                 <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
@@ -929,7 +929,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Imagenes">
-            <EntityTypeMapping TypeName="Model.Imagenes">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Imagenes">
               <MappingFragment StoreEntitySet="Imagenes">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Imagen" ColumnName="Imagen" />
@@ -937,7 +937,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pedidos">
-            <EntityTypeMapping TypeName="Model.Pedidos">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Pedidos">
               <MappingFragment StoreEntitySet="Pedidos">
                 <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
@@ -949,7 +949,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Productos">
-            <EntityTypeMapping TypeName="Model.Productos">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Productos">
               <MappingFragment StoreEntitySet="Productos">
                 <ScalarProperty Name="IdProductos" ColumnName="IdProductos" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -961,7 +961,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Promociones">
-            <EntityTypeMapping TypeName="Model.Promociones">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Promociones">
               <MappingFragment StoreEntitySet="Promociones">
                 <ScalarProperty Name="IdPromociones" ColumnName="IdPromociones" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -973,7 +973,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Proveedores">
-            <EntityTypeMapping TypeName="Model.Proveedores">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Proveedores">
               <MappingFragment StoreEntitySet="Proveedores">
                 <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -984,7 +984,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Stock">
-            <EntityTypeMapping TypeName="Model.Stock">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Stock">
               <MappingFragment StoreEntitySet="Stock">
                 <ScalarProperty Name="IdStock" ColumnName="IdStock" />
                 <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
@@ -994,7 +994,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sugerencias">
-            <EntityTypeMapping TypeName="Model.Sugerencias">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Sugerencias">
               <MappingFragment StoreEntitySet="Sugerencias">
                 <ScalarProperty Name="IdSugerencias" ColumnName="IdSugerencias" />
                 <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
@@ -1004,7 +1004,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="Model.sysdiagrams">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -1015,7 +1015,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TiposdeUsuario">
-            <EntityTypeMapping TypeName="Model.TiposdeUsuario">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.TiposdeUsuario">
               <MappingFragment StoreEntitySet="TiposdeUsuario">
                 <ScalarProperty Name="IdTipos" ColumnName="IdTipos" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -1023,7 +1023,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuarios">
-            <EntityTypeMapping TypeName="Model.Usuarios">
+            <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Usuarios">
               <MappingFragment StoreEntitySet="Usuarios">
                 <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
@@ -1037,7 +1037,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="Provedores_to_Compras" TypeName="Model.Provedores_to_Compras" StoreEntitySet="Provedores-to-Compras">
+          <AssociationSetMapping Name="Provedores_to_Compras" TypeName="DB_A4212A_FashionClothesModel.Provedores_to_Compras" StoreEntitySet="Provedores-to-Compras">
             <EndProperty Name="Compras">
               <ScalarProperty Name="IdCompras" ColumnName="IdCompras" />
             </EndProperty>

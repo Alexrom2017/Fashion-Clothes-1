@@ -26,7 +26,7 @@ namespace Prueba3
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            var conn = new OtraMas();
+            var conn = new N1();
             SqlConnection n2 = new SqlConnection(cadenaConexion);
             var User1 = new Usuarios()
             {

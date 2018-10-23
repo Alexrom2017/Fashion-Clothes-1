@@ -14,7 +14,7 @@
            <div class="container">         
                 <div class="row">
                     <div class="col-md-6">
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:baseappConnectionString %>" SelectCommand="SELECT * FROM [Productos]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Productos]"></asp:SqlDataSource>
   <%--*********************************************************************************************************--%>                
                     <div class="col-md-8">   
                     <br />
@@ -71,10 +71,9 @@
                             <Columns>
                                 <asp:BoundField DataField="IdProductos" HeaderText="IdProductos" ReadOnly="True" SortExpression="IdProductos" />
                                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                                <asp:BoundField DataField="Proveedor" HeaderText="Proveedor" SortExpression="Proveedor" />
                                 <asp:BoundField DataField="PrecioCompra" HeaderText="PrecioCompra" SortExpression="PrecioCompra" />
                                 <asp:BoundField DataField="PrecioVenta" HeaderText="PrecioVenta" SortExpression="PrecioVenta" />
+                                <asp:BoundField DataField="Detalles" HeaderText="Detalles" SortExpression="Detalles" />
                                 <asp:BoundField DataField="IdCategoria" HeaderText="IdCategoria" SortExpression="IdCategoria" />
                             </Columns>
                             <EditRowStyle BackColor="#7C6F57" />
